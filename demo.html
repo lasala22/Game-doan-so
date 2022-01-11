@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Play()">Play</button>
+</body>
+</html>
+<script>
+    function Play() {
+        let range = +prompt("Đoán số từ 0 -> ?");
+        let num = +prompt("Số muốn chọn");
+        let numrd;
+        let i = 0;
+        numrd = Math.floor(Math.random()*range);
+        if(numrd == num) {
+            alert("Chúc mừng");
+        }else if(num !=numrd) {
+            while(i < 3) {
+                alert("Bạn đoán sai số đúng là "+numrd);
+                num = +prompt("Số muốn chọn");
+                i++;
+                if (num == numrd) {
+                    alert("chúc mừng bạn đã đúng");
+                    break;
+                }
+            }
+        }
+    }
+</script>
